@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+.loginContainer {
+    overflow: hidden;
+}
+
+.loginSection {
+    position: absolute;
+    background: #4E4E4E;
+    top: 3.9em;
+    height: 40em;
+    right: 18.85em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#loginBackground {
+    background-image: url('../../../static/images/wepik-2022319-214333@2x.png');
+    background-size: cover;
+    background-position: center;
+    scale: 106%;
+    /* height: 100vh; */
+    z-index: -1;
+    display: grid;
+    place-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginCard {
+    height: 40em;
+    width: 58em;
+    margin: auto;
+
+}
+
+span {
+    font-family: 'Inter';
+    position: absolute;
+    bottom: 2em;
+    color: #fff;
+    line-height: 1.1em;
+    left: 5.8em;
+    width: 7.5em;
+    font-size: 3.5em;
+}
+
+.loginSection {
+    float: right;
+    /* border: 1px solid black; */
+    width: 300px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.inputFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+.inputFields>label {
+    color: red;
+}
+
+.inputFields input {
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+}

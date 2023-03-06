@@ -1,0 +1,7 @@
+#searchbar ::placeholder {
+    padding-left: 2.5em;
+    font-size: 12px;
+    font-weight: 600 !important;
+    color: #4b4a66 !important;
+    opacity: 0.8 !important;
+}

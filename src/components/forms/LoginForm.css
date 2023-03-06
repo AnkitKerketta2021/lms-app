@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+#form_header {
+    font-family: 'Abril Fatface';
+    font-weight: 400;
+}
+
+#form_logo {
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+#loginInputId {
+    margin-bottom: 5px !important;
+}
+
+#loginformLabel1, #loginformLabel2 {
+    color: #fff;
+    font-size: 12px;
+    margin: 3px 0 3px 0;
+}
+
+#adminLoginForm ::placeholder {
+    padding-left:0.4em;
+    color: #c4c4c4;
+    font-size: 11px;
+}
