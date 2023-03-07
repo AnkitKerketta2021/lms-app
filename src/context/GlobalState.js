@@ -24,7 +24,12 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // ! ACTIONS
-  
+  const selectAdminSideMenuBar = (selectedOption) => {
+    dispatch({
+      type: "SIDE_NAV",
+      payload: selectedOption,
+    });
+  };
 
   return (
     <GlobalState.Provider
@@ -32,6 +37,8 @@ export const GlobalProvider = ({ children }) => {
         employeeData: state.employeeData,
         mentorData: state.mentorData,
         adminData: state.adminData,
+        adminSideMenuBar: state.adminSideMenuBar,
+        selectAdminSideMenuBar,
       }}
     >
       {children}

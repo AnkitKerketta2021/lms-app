@@ -1,11 +1,10 @@
 import { Grid } from "@mui/material";
-import { fontSize } from "@mui/system";
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalState } from "../../context/GlobalState";
 import TableNavbar from "./TableNavbar";
 
 const TableStructure = () => {
-
-  const selectedSideMenuOption ="Batch"
+const {adminSideMenuBar} = useContext(GlobalState);
   const spanStyle ={
     width: "1414px",
         height: "30px",
@@ -14,7 +13,7 @@ const TableStructure = () => {
         zIndex:10,
         top:'90px',
         marginLeft:'15px',
-        fontSize:'14px'
+        fontSize:'14px',
   }
   const tableStyle ={
         width:'92%',
@@ -28,7 +27,7 @@ const TableStructure = () => {
   }
   return (
     <Grid className="tableBg" style={{ maxWidth:400}}>
-    <span style={spanStyle}>Home <b>{">"} {selectedSideMenuOption}</b></span>
+    <span style={spanStyle}>Home <b>{">"} {adminSideMenuBar}</b></span>
       <div
       className="p-2"
       style={tableStyle}

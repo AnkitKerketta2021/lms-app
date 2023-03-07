@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import { GlobalState } from "../../context/GlobalState";
 
-const selectedSideMenuOption = "Batch";
 
 const TableNavbar = () => {
+    const {adminSideMenuBar} = useContext(GlobalState);
   const tableNavBarStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -20,13 +21,13 @@ const TableNavbar = () => {
   return (
     <div className="mt-2 me-3" id="tableNavbar" style={tableNavBarStyle}>
       <b style={{ color: "#FBAA21", fontSize: "14px" }}>
-        {selectedSideMenuOption} list
+        {adminSideMenuBar} list
       </b>
       <div
         style={{ display: "flex", justifyContent: "space-around", gap: "25px" }}
       >
     <input style={inputStyle} type="text"/>
-       <Button variant="contained" color="warning" style={{fontSize:'12px'}}><AddRoundedIcon></AddRoundedIcon> New {selectedSideMenuOption}</Button>
+       <Button variant="contained" color="warning" style={{fontSize:'12px',textTransform:'capitalize'}}><AddRoundedIcon></AddRoundedIcon> New {adminSideMenuBar}</Button>
       </div>
     </div>
   );

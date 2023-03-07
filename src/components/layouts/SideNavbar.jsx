@@ -4,13 +4,14 @@ import { GlobalState } from "../../context/GlobalState";
 import "./SideNavbar.css";
 
 const SideNavbar = () => {
-  const { adminData } = useContext(GlobalState);
-  const [activeSideBar, setactiveSideBar] = useState(adminData[0].name);
+  const { adminData, selectAdminSideMenuBar } =
+    useContext(GlobalState);
   const [toggleSideNavbar, settoggleSideNavbar] = useState(0);
 
   const handleActiveSidebar = (event, val) => {
     let activeItem = adminData.indexOf(val);
-    settoggleSideNavbar(activeItem)
+    settoggleSideNavbar(activeItem);
+    selectAdminSideMenuBar(val.name);
   };
 
   return (
@@ -33,11 +34,13 @@ const SideNavbar = () => {
       >
         {adminData.map((val, index) => (
           <Grid
-            className={index=== toggleSideNavbar?"sidebarIconActive":"sidebarIcon"}
+            className={
+              index === toggleSideNavbar ? "sidebarIconActive" : "sidebarIcon"
+            }
             onClick={(event) => handleActiveSidebar(event, val)}
             item
             sx={2}
-            key={val}
+            key={index+1}
             style={{ textAlign: "center", fontSize: "12px", color: "#086288" }}
           >
             {val.icon}

@@ -1,10 +1,12 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 import "./BodyContent.css"
+import { GlobalState } from "../../context/GlobalState";
 
 const BodyContent = () => {
+  const {adminSideMenuBar} = useContext(GlobalState);
   return (
     <div
       style={{
@@ -34,7 +36,7 @@ const BodyContent = () => {
           <div style={{ flex: "end" }}>
             <Button  style={{textTransform:'capitalize'}} variant="contained" className="btn btn-warning mt-3" color="warning"  >
               <AddIcon />
-              New Batch
+              New {adminSideMenuBar}
             </Button>
           </div>
         </div>
