@@ -1,16 +1,31 @@
 .sideNav {
+    padding-top: 20px;
     background: #fff;
     box-shadow: 2px 0 4px #F5F5F5;
 }
 
-#sidebarIcon {
+.sidebarIcon {
+    cursor: pointer;
     background: none;
-    padding: 0.2em;
+    padding: 0.3em;
     transition: 0.2s;
     border-radius: 5px;
 }
 
-#sidebarIcon:hover {
+.sidebarIcon:hover {
+    cursor: pointer;
+    padding: 0.3em;
+    transition: 0.2s;
+    border-radius: 5px;
+    background: #086288;
+    color: #fff !important;
+}
+
+.sidebarIconActive {
+    cursor: pointer;
+    padding: 0.3em;
+    transition: 0.2s;
+    border-radius: 5px;
     background: #086288;
     color: #fff !important;
 }

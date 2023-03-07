@@ -1,0 +1,19 @@
+#searchbar ::placeholder {
+    padding-left: 25px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    #topSearchbar {
+        width: 400px !important;
+        position: relative;
+        margin-left: 80px;
+    }
+
+    #searchbar #searchIcon {
+        position: relative !important;
+        top: 8px !important;
+        left: 110px !important;
+        z-index: 200;
+    }
+
+}

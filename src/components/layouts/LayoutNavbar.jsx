@@ -12,6 +12,7 @@ const LayoutNavbar = () => {
         style={{
           border: "1px solid #F5F5F5",
           position: "fixed",
+          width:"100%",
           top: "1px",
           boxShadow: "0 2px 4px #F5F5F5",
         }}
@@ -21,7 +22,7 @@ const LayoutNavbar = () => {
         <Grid item xs={4}>
           <img
             className="p-1"
-            style={{ width: "188px", height: "60px", margin: " 0" }}
+            style={{ width: "188px", height: "60px"}}
             src={logo}
             alt="Logo"
           />

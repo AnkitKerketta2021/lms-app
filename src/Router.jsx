@@ -12,7 +12,7 @@ const Router = () => {
         <Route path="/admin/login" element={<LmsMainAppComponent />} />
         <Route path="/mentor/login" element={<LmsMainAppComponent />} />
         <Route path="/employee/login" element={<LmsMainAppComponent />} />
-        <Route path="/batch" element={<DisplayDetails />} />
+        <Route path="/batch" element={<Layout1 />} />
       </Routes>
     </div>
   );
