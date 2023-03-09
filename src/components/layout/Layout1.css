@@ -2,18 +2,33 @@
     padding-left: 25px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 914px) {
     #topSearchbar {
         width: 400px !important;
         position: relative;
-        margin-left: 80px;
+        left: 80px;
     }
 
-    #searchbar #searchIcon {
-        position: relative !important;
-        top: 8px !important;
-        left: 110px !important;
-        z-index: 200;
+    #searchIcon {
+        position: relative;
+        z-index: 1;
+        left: 107px;
     }
 
+}
+
+
+@media screen and (max-width: 720px) {
+    #topNavBar, .logoutButton {
+        position: relative;
+        scale: 0%;
+    }
+
+}
+
+
+#searchbar #searchIcon {
+    position: relative !important;
+    top: 10px !important;
+    z-index: 200;
 }

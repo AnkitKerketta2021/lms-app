@@ -6,6 +6,7 @@ import logo from "../../static/images/new_Logo.png";
 
 import "./Layout1.css";
 import TableStructure from "./../table/TableStructure";
+import { Link } from "react-router-dom";
 
 const employeeOptions = [
   {
@@ -40,9 +41,8 @@ const boxShadow = {
 
 const searchIconStyle = {
   position: "relative",
-  right: "-27px",
+  right: "-30px",
   fontSize: "1.2em",
-  top: "8px",
   color: "#BCBCCB",
 };
 
@@ -77,7 +77,7 @@ const Layout1 = () => {
             alt="Logo"
           />
         </Box>
-        <Box gridColumn="span 8">
+        <Box gridColumn="span 8" id="topNavBar">
           <div
             id="searchbar"
             className="d-flex mt-4 mb-3"
@@ -104,9 +104,15 @@ const Layout1 = () => {
           display={"flex"}
           style={{ justifyContent: "end" }}
         >
-          <Button className="mt-4 me-4" style={buttonStyle} variant="outlined">
-            Logout
-          </Button>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <Button
+              className="logoutButton mt-4 me-4"
+              style={buttonStyle}
+              variant="outlined"
+            >
+              Logout
+            </Button>
+          </Link>
         </Box>
         <Box id="sideNavbar">
           <Grid container spacing={6}>

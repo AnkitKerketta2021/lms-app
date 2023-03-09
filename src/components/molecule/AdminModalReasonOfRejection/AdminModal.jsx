@@ -26,10 +26,18 @@ const btnStyle = {
   float: "right",
 };
 
-const AdminModal = ({ header, onSubmit, onClose }) => {
+const AdminModal = ({
+  header,
+  onSubmit,
+  onClose,
+  setrequestApproveOrReject,
+}) => {
   const [open, setOpen] = useState(true);
   //   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    setrequestApproveOrReject(false);
+  };
 
   const handleSubmit = () => {
     handleClose();
@@ -51,10 +59,7 @@ const AdminModal = ({ header, onSubmit, onClose }) => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <ModalTop
-              onClick={handleClose}
-              textContent={"Add new mentor"}
-            />
+            <ModalTop onClick={handleClose} textContent={"Add new mentor"} />
             <hr style={{ scale: "119%" }} />
             <div style={{ textAlign: "center" }}>
               <TextArea

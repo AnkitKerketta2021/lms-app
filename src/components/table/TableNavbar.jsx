@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import SearchIcon from "@mui/icons-material/Search";
 import { GlobalState } from "../../context/GlobalState";
 
 
@@ -24,10 +25,10 @@ const TableNavbar = () => {
         {adminSideMenuBar} list
       </b>
       <div
-        style={{ display: "flex", justifyContent: "space-around", gap: "25px" }}
-      >
+        style={{ display: "flex", justifyContent: "space-around", gap: "25px" }}>
+      <SearchIcon style={{color:'#B7B8BA', position:'relative', left:'55px', top:'7px',fontSize:'20px'}}/>
     <input style={inputStyle} type="text"/>
-       <Button variant="contained" color="warning" style={{fontSize:'12px',textTransform:'capitalize'}}><AddRoundedIcon></AddRoundedIcon> New {adminSideMenuBar}</Button>
+      {adminSideMenuBar==="Request"?"": <Button variant="contained" color="warning" style={{fontSize:'12px',textTransform:'capitalize'}}><AddRoundedIcon></AddRoundedIcon> New {adminSideMenuBar}</Button>}
       </div>
     </div>
   );

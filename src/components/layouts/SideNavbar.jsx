@@ -4,12 +4,12 @@ import { GlobalState } from "../../context/GlobalState";
 import "./SideNavbar.css";
 
 const SideNavbar = () => {
-  const { adminData, selectAdminSideMenuBar } =
+  const { adminSideBarData, selectAdminSideMenuBar } =
     useContext(GlobalState);
   const [toggleSideNavbar, settoggleSideNavbar] = useState(0);
 
   const handleActiveSidebar = (event, val) => {
-    let activeItem = adminData.indexOf(val);
+    let activeItem = adminSideBarData.indexOf(val);
     settoggleSideNavbar(activeItem);
     selectAdminSideMenuBar(val.name);
   };
@@ -32,7 +32,7 @@ const SideNavbar = () => {
         gridRow={6}
         rowGap={2}
       >
-        {adminData.map((val, index) => (
+        {adminSideBarData.map((val, index) => (
           <Grid
             className={
               index === toggleSideNavbar ? "sidebarIconActive" : "sidebarIcon"
